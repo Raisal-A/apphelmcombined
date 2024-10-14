@@ -1,0 +1,5 @@
+# prod-env.yaml
+env:
+  ENVIRONMENT: "prod"
+  DB_URL: "mysql://prod-db"
+  FEATURE_FLAG: "false"

@@ -1,0 +1,5 @@
+# uat-env.yaml
+env:
+  ENVIRONMENT: "uat"
+  DB_URL: "mysql://uat-db"
+  FEATURE_FLAG: "false"

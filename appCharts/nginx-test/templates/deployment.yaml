@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}  # Use the appName here
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}  # Update the selector with appName
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}  # Update labels with appName
+    spec:
+      containers:
+        - name: {{ .Values.appName }}  # Use appName for the container name
+          image: {{ .Values.image }}
+          ports:
+            - containerPort: {{ .Values.port }}
+          env:
+            - name: ENVIRONMENT
+              value: {{ .Values.env.ENVIRONMENT | quote }}
+            - name: DB_URL
+              value: {{ .Values.env.DB_URL | quote }}
+            - name: FEATURE_FLAG
+              value: {{ .Values.env.FEATURE_FLAG | quote }}

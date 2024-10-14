@@ -1,0 +1,7 @@
+# prod-values.yaml
+appName: "nginx-mw-prod"  # Application name
+environment: prod        # This can be removed if handled in env
+image: "nginx:latest"     # Image to use
+replicas: 2               # Number of replicas
+port: 80                  # Port to expose
+namespace: prod         # Kubernetes namespace

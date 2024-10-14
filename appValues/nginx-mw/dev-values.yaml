@@ -1,0 +1,7 @@
+# dev-values.yaml
+appName: "nginx-mw-dev"  # Application name
+environment: dev        # This can be removed if handled in env
+image: "nginx:latest"     # Image to use
+replicas: 2               # Number of replicas
+port: 80                  # Port to expose
+namespace: dev         # Kubernetes namespace

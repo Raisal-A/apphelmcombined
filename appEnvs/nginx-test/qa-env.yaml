@@ -1,0 +1,5 @@
+# qa-env.yaml
+env:
+  ENVIRONMENT: "qa"
+  DB_URL: "mysql://qa-db"
+  FEATURE_FLAG: "false"

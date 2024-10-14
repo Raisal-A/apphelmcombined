@@ -1,0 +1,7 @@
+# qa-values.yaml
+appName: "nginx-test-qa"  # Application name
+environment: qa        # This can be removed if handled in env
+image: "nginx:latest"     # Image to use
+replicas: 2               # Number of replicas
+port: 80                  # Port to expose
+namespace: qa         # Kubernetes namespace
